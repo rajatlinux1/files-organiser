@@ -1,3 +1,3 @@
 # files-organiser
-clone this file and directly run in directory. where you want organise files.
+clone this repo and copy/move "files_organiser.py" in directory. Where you want to organise files.
 cmd = python3 files_organiser.py
