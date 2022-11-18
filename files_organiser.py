@@ -20,6 +20,8 @@ for i in list_1:
             if not os.path.exists(extensions):
                 os.makedirs(extensions)
             shutil.move(i, extensions)
+        except:
+            continue
 
     else:
         continue
