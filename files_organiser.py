@@ -31,6 +31,6 @@ for i in os.listdir():
 notification.notify(
     title=f"Files Organiser {current_time}",
     message="Files organized successfully",
-    app_icon="https://imgs.search.brave.com/I5Qnd_JVhz2vNcXYhmlKW6wQUlhIfd1d5FeK3KTA_ds/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzQ1/MC82NjYvb3JpZ2lu/YWwvdmVjdG9yLWZp/bGVzLWljb24uanBn",
+    #app_icon="https://imgs.search.brave.com/I5Qnd_JVhz2vNcXYhmlKW6wQUlhIfd1d5FeK3KTA_ds/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzQ1/MC82NjYvb3JpZ2lu/YWwvdmVjdG9yLWZp/bGVzLWljb24uanBn",
     timeout=5000
 )
