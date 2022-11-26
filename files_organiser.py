@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os
+import os, sys
 import shutil
 from pathlib import Path
 from datetime import datetime
@@ -17,7 +17,7 @@ for i in os.listdir():
             extensions = str(file_path.suffix).replace(".", "")
             if not os.path.exists(extensions):
                 os.makedirs(extensions)
-            if i == BASE_DIR.split("/")[-1]:
+            if i == BASE_DIR.split("/")[-1] or i==sys.prefix.split("/")[-1] or i==sys.prefix.split("\\")[-1] or i=="icon.ico": #To ignore this files or directories
                 continue
             shutil.move(i, extensions)
 
@@ -26,11 +26,17 @@ for i in os.listdir():
             if not os.path.exists(extensions):
                 os.makedirs(extensions)
             shutil.move(i, extensions)
-        except:
+        except Exception as e:
+            notification.notify(
+            title=f"Files Organiser {current_time}",
+            message=e,
+            # app_icon="icon.ico",
+            timeout=5000
+        )
             continue
 notification.notify(
     title=f"Files Organiser {current_time}",
     message="Files organized successfully",
-    #app_icon="https://imgs.search.brave.com/I5Qnd_JVhz2vNcXYhmlKW6wQUlhIfd1d5FeK3KTA_ds/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzQ1/MC82NjYvb3JpZ2lu/YWwvdmVjdG9yLWZp/bGVzLWljb24uanBn",
+    # app_icon="icon.ico",
     timeout=5000
 )
